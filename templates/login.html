@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Đăng nhập</h2>
+<form method="post">
+  <input type="text" name="email" placeholder="Email"><br>
+  <input type="password" name="password" placeholder="Mật khẩu"><br>
+  <button type="submit">Đăng nhập</button>
+</form>
+<p><a href="{{ url_for('register') }}">Đăng ký</a></p>
+{% endblock %}

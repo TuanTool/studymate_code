@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Bài tập</h2>
+<form method="post">
+  <input type="text" name="title" placeholder="Tên bài tập">
+  <input type="date" name="due_date">
+  <button type="submit">Giao bài tập</button>
+</form>
+<ul>
+  {% for a in assignments %}
+    <li>{{ a[2] }} - Hạn: {{ a[3] }}
+      <a href="{{ url_for('submissions', assignment_id=a[0]) }}">Xem bài nộp</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

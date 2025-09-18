@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Đăng ký</h2>
+<form method="post">
+  <input type="text" name="name" placeholder="Họ tên"><br>
+  <input type="text" name="email" placeholder="Email"><br>
+  <input type="password" name="password" placeholder="Mật khẩu"><br>
+  <select name="role">
+    <option value="student">Học viên</option>
+    <option value="teacher">Giáo viên</option>
+  </select><br>
+  <button type="submit">Đăng ký</button>
+</form>
+{% endblock %}

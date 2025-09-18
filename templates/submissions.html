@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Bài nộp</h2>
+<form method="post">
+  <input type="text" name="file_url" placeholder="Link file bài nộp">
+  <button type="submit">Nộp</button>
+</form>
+<ul>
+  {% for s in submissions %}
+    <li>{{ s[3] }} | Điểm: {{ s[4] if s[4] else "Chưa chấm" }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

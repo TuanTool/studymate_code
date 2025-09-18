@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Quản lý khóa học</h2>
+<form method="post">
+  <input type="text" name="title" placeholder="Tên khóa học">
+  <input type="text" name="description" placeholder="Mô tả">
+  <button type="submit">Tạo</button>
+</form>
+<ul>
+  {% for c in courses %}
+    <li>{{ c[1] }} - {{ c[2] }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

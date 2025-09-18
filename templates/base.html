@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>StudyMate</title>
+</head>
+<body>
+  <p>
+    {% if session.user_id %}
+      Xin chào! <a href="{{ url_for('logout') }}">Đăng xuất</a>
+    {% endif %}
+  </p>
+  <hr>
+  {% block content %}{% endblock %}
+</body>
+</html>
